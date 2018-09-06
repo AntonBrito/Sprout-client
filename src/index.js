@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import PostBox from "./PostBox";
+import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<PostBox />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
