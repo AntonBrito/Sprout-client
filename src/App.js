@@ -7,8 +7,15 @@ class App extends Component {
     return (
       <div>
         <Header branding="Sprout" />
-        <div>
-          <Post />
+        <div className="container">
+          <Post
+            title="Miracle"
+            body="Its amazing seeing this little one growing every single day."
+          />
+          <Post
+            title="Being a father"
+            body="From the moment tha she was born, I felt in love with my new life, starting by sayim Im a father. Im her father and Im resposimble to bring her to this beatiful world."
+          />
         </div>
       </div>
     );
