@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Post from "./components/stories/Post";
+import Posts from "./components/stories/Posts";
 import Header from "./components/layout/Header";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,14 +10,7 @@ class App extends Component {
       <div>
         <Header branding="Sprout" />
         <div className="container">
-          <Post
-            title="Miracle"
-            body="Its amazing seeing this little one growing every single day."
-          />
-          <Post
-            title="Being a father"
-            body="From the moment tha she was born, I felt in love with my new life, starting by sayim Im a father. Im her father and Im resposimble to bring her to this beatiful world."
-          />
+          <Posts />
         </div>
       </div>
     );
