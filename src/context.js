@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const Context = React.createContext();
 
-export class Provider extends Compoent {
+export class Provider extends Component {
   state = {
     posts: [
       {
@@ -33,3 +33,5 @@ export class Provider extends Compoent {
     );
   }
 }
+
+export const Consumer = Context.Consumer;
