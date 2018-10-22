@@ -16,6 +16,19 @@ const Header = props => {
                 Home
               </a>
             </li>
+            {
+              // Add for navbar
+              /* <li className="nav-item">
+              <a href="/" className="nav-link">
+                Add
+              </a>
+            </li> */
+            }
+            {/* <i
+              className="fab fa-github"
+              style={{ cursor: "pointer", float: "right" }}
+              onClick={this.onClick}
+            /> */}
           </ul>
         </div>
       </div>
