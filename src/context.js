@@ -35,8 +35,7 @@ export class Provider extends Component {
           "Let the water drop take you to this beautiful ocean where everything is blue and green"
       }
     ],
-    dispatch: action => this.setState(state => reducer(state,action))
-    }
+    dispatch: action => this.setState(state => reducer(state, action))
   };
 
   render() {

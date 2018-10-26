@@ -7,15 +7,18 @@ class Post extends Component {
     showPostInfo: false
   };
 
-  onDeleteClick() {}
+  onDeleteClick(id, dispatch) {
+    dispatch({ type: "DELETE_POST", payload: id });
+  }
 
   render() {
-    const { title, body } = this.props.post;
+    const { id, title, body } = this.props.post;
     const { showPostInfo } = this.state;
 
     return (
       <Consumer>
         {value => {
+          const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
               <h4>
@@ -30,7 +33,7 @@ class Post extends Component {
                 <i
                   className="fas fa-times"
                   style={{ cursor: "pointer", float: "right", color: "red" }}
-                  onClick={this.onDeleteClick}
+                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
               </h4>
               {showPostInfo ? (
