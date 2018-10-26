@@ -2,6 +2,18 @@ import React, { Component } from "react";
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "DELETE_POST":
+      return {
+        ...state,
+        posts: state.posts.filter(post => post.id !== action.payload)
+      };
+    default:
+      return state;
+  }
+};
+
 export class Provider extends Component {
   state = {
     posts: [
