@@ -6,9 +6,7 @@ class Post extends Component {
     showPostInfo: false
   };
 
-  onDeleteClick() {
-    this.props.deleteClickHandler();
-  }
+  onDeleteClick() {}
 
   render() {
     const { title, body } = this.props.post;
@@ -38,8 +36,7 @@ class Post extends Component {
 }
 
 Post.protoTypes = {
-  post: PropTypes.object.isRequired,
-  deleteClickHandler: PropTypes.func.isRequired
+  post: PropTypes.object.isRequired
 };
 
 export default Post;
