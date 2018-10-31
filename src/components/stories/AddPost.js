@@ -5,6 +5,10 @@ class AddPost extends Component {
     title: "",
     body: ""
   };
+
+  onTitleChange = e => this.setState({ title: e.target.value });
+  onBodyChange = e => this.setState({ body: e.target.value });
+
   render() {
     const { title, body } = this.state;
     return (
@@ -20,6 +24,7 @@ class AddPost extends Component {
                 className="form-control form-control-lg"
                 placeholder="Enter a Title"
                 value={title}
+                onChange={this.onTitleChange}
               />
               <div className="form-group">
                 <label htmlFor="story">My Story</label>
@@ -29,6 +34,7 @@ class AddPost extends Component {
                   className="form-control form-control-lg"
                   placeholder="What would you like to share?"
                   value={body}
+                  onChange={this.onBodyChange}
                 />
               </div>
               <input
