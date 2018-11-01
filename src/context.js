@@ -9,6 +9,11 @@ const reducer = (state, action) => {
         ...state,
         posts: state.posts.filter(post => post.id !== action.payload)
       };
+    case "Add_POST":
+      return {
+        ...state,
+        posts: [action.payloD, ...state.posts]
+      };
     default:
       return state;
   }
