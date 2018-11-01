@@ -1,14 +1,27 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
+import uuid from "uuid";
 
 class AddPost extends Component {
   state = {
     title: "",
     body: ""
   };
-  onSubmit = e => {
+  onSubmit = (dispatch, e) => {
     e.preventDefault();
-    console.log(this.state);
+    const { title, body } = this.state;
+
+    const newPost = {
+      id: uuid(),
+      title,
+      body
+    };
+    dispatch({ type: "ADD_POST", payload: newPost });
+    // Clear State
+    this.setState({
+      title: "",
+      body: ""
+    });
   };
   onChange = e => this.setState({ [e.target.title]: e.target.value });
 
@@ -23,7 +36,7 @@ class AddPost extends Component {
             <div className="card mb-3">
               <div className="card-header">Add a Story</div>
               <div className="card-body">
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                   <div className="form-group">
                     <label htmlFor="title">Title</label>
                     <input
