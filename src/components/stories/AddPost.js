@@ -16,28 +16,13 @@ class AddPost extends Component {
     const { title, body } = this.state;
 
     // Check for errors
-    if (name === "") {
-      this.setState({ erros: { name: "Email is required" } });
+    if (title === "") {
+      this.setState({ erros: { title: "Title is required" } });
       return;
     }
 
-    if (location === "") {
-      this.setState({ erros: { location: "location is required" } });
-      return;
-    }
-
-    if (date === "") {
-      this.setState({ erros: { date: "date is required" } });
-      return;
-    }
-
-    if (divebuddy === "") {
-      this.setState({ erros: { divebuddy: "Email is required" } });
-      return;
-    }
-
-    if (notes === "") {
-      this.setState({ erros: { notes: "notes is required" } });
+    if (body === "") {
+      this.setState({ erros: { location: "body is required" } });
       return;
     }
 
@@ -59,7 +44,7 @@ class AddPost extends Component {
   onChange = e => this.setState({ [e.target.title]: e.target.value });
 
   render() {
-    const { title, body } = this.state;
+    const { title, body, errors } = this.state;
 
     return (
       <Consumer>
