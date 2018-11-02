@@ -91,7 +91,6 @@ class AddPost extends Component {
                     type="submit"
                     value="Add a story"
                     className="btn btn-light btn-block"
-                    cursor="pointer"
                   />
                 </form>
               </div>
