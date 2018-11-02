@@ -37,7 +37,8 @@ class AddPost extends Component {
     // Clear State
     this.setState({
       title: "",
-      body: ""
+      body: "",
+      errors: {}
     });
   };
 
