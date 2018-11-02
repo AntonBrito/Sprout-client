@@ -33,4 +33,8 @@ TextInputGroup.propTypes = {
   onChange: PropTypes.func.isRequired
 };
 
+TextInputGroup.defaultProps = {
+  type: "text"
+};
+
 export default TextInputGroup;
