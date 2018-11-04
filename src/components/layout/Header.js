@@ -36,7 +36,6 @@ const Header = props => {
                 style={{ cursor: "pointer", float: "right" }}
                 onClick={this.onClick}
               />
-              <Link to="/" className="nav-link" />
             </li>
           </ul>
         </div>
