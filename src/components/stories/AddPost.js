@@ -40,6 +40,8 @@ class AddPost extends Component {
       body: "",
       errors: {}
     });
+
+    this.props.history.push("/");
   };
 
   onChange = e => this.setState({ [e.target.title]: e.target.value });
@@ -66,12 +68,11 @@ class AddPost extends Component {
                   />
                   <TextInputGroup
                     label="Body"
-                    type="text"
                     name="body"
                     placeholder="Add your Story"
                     value={body}
                     onChange={this.onChange}
-                    errors={errors.body}
+                    error={errors.body}
                   />
                   <input
                     type="submit"
