@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Posts from "./components/stories/Posts";
 import Header from "./components/layout/Header";
 import About from "./components/pages/About";
+import NotFound from "./components/pages/NotFound";
 import AddPost from "./components/stories/AddPost";
 import { Provider } from "./context";
 
@@ -20,6 +21,7 @@ class App extends Component {
                 <Route exact path="/" component={Posts} />
                 <Route exact path="/stories/add" component={AddPost} />
                 <Route exact path="/about" component={About} />
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
