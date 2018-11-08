@@ -30,13 +30,6 @@ const Header = props => {
                 About
               </Link>
             </li>
-            <li>
-              <i
-                className="fab fa-github"
-                style={{ cursor: "pointer", float: "right" }}
-                onClick={this.onClick}
-              />
-            </li>
           </ul>
         </div>
       </div>
