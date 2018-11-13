@@ -40,6 +40,20 @@ class EditPost extends Component {
       return;
     }
 
+    const updPost = {
+      title,
+      body
+    };
+
+    const { id } = this.props.match.params;
+
+    const res = await axios.put(
+      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      updPost
+    );
+
+    dispatch({ type: "UPDATE_POST", payload: res.data });
+
     // Clear State
     this.setState({
       title: "",
