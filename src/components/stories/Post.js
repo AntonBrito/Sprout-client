@@ -8,11 +8,11 @@ class Post extends Component {
     showPostInfo: false
   };
 
-  onDeleteClick(id, dispatch) {
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then(res => dispatch({ type: "DELETE_POST", payload: id }));
-  }
+  onDeleteClick = async (id, dispatch) => {
+    await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
+
+    dispatch({ type: "DELETE_POST", payload: id });
+  };
 
   render() {
     const { id, title, body } = this.props.post;

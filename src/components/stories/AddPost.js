@@ -9,7 +9,7 @@ class AddPost extends Component {
     body: "",
     errors: {}
   };
-  onSubmit = (dispatch, e) => {
+  onSubmit = async (dispatch, e) => {
     e.preventDefault();
 
     const { title, body } = this.state;
@@ -30,11 +30,12 @@ class AddPost extends Component {
       body
     };
 
-    axios
-      .post("https://jsonplaceholder.typicode.com/posts", newPost)
-      .then(res => dispatch({ type: "ADD_POST", payload: newPost }));
+    const res = await axios.post(
+      "https://jsonplaceholder.typicode.com/posts",
+      newPost
+    );
 
-    dispatch({ type: "ADD_POST", payload: newPost });
+    dispatch({ type: "ADD_POST", payload: res.data });
 
     // Clear State
     this.setState({
