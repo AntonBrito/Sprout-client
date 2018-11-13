@@ -15,6 +15,13 @@ const reducer = (state, action) => {
         ...state,
         posts: [action.payload, ...state.posts]
       };
+    case "UPDATE_POST":
+      return {
+        ...state,
+        post: state.posts.map(post =>
+          post.id === action.id ? (post = action.payload) : post
+        )
+      };
     default:
       return state;
   }
