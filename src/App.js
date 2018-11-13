@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import About from "./components/pages/About";
 import NotFound from "./components/pages/NotFound";
 import AddPost from "./components/stories/AddPost";
+import EditPost from "./components/stories/EditPost";
 import { Provider } from "./context";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,6 +21,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Posts} />
                 <Route exact path="/stories/add" component={AddPost} />
+                <Route exact path="/stories/edit/:id" component={EditPost} />
                 <Route exact path="/about" component={About} />
                 <Route component={NotFound} />
               </Switch>
