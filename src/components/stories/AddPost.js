@@ -47,7 +47,10 @@ class AddPost extends Component {
     this.props.history.push("/");
   };
 
-  onChange = e => this.setState({ [e.target.title]: e.target.value });
+  onChange = e =>
+    this.setState({
+      [e.target.title]: e.target.value
+    });
 
   render() {
     const { title, body, errors } = this.state;
