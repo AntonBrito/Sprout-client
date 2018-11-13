@@ -26,7 +26,6 @@ const reducer = (state, action) => {
       return state;
   }
 };
-
 export class Provider extends Component {
   state = {
     posts: [],
@@ -34,10 +33,9 @@ export class Provider extends Component {
   };
 
   async componentDidMount() {
-    const res = await axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
 
-      .this.setState({ posts: res.data });
+    this.setState({ posts: res.data });
   }
 
   render() {
