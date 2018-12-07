@@ -31,7 +31,7 @@ class AddPost extends Component {
     };
 
     const res = await axios.post(
-      "https://jsonplaceholder.typicode.com/posts",
+      `https://jsonplaceholder.typicode.com/posts`,
       newPost
     );
 
