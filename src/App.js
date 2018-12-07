@@ -21,7 +21,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Posts} />
                 <Route exact path="/stories/add" component={AddPost} />
-                <Route exact path="/stories/edit/:id" component={EditPost} />
+                <Route exact path="/stories/edit:id" component={EditPost} />
                 <Route exact path="/about" component={About} />
                 <Route component={NotFound} />
               </Switch>
